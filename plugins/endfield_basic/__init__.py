@@ -46,7 +46,7 @@ async def endfield_info(data: Message):
 
 
 # 佩莉卡角色信息
-@bot.on_message(keywords=['佩莉卡信息', 'perlica info'])
+@bot.on_message(keywords=['佩莉卡详情', '佩莉卡资料', 'perlica info'])
 async def perlica_info(data: Message):
     """佩莉卡角色信息"""
     info_text = '''【佩莉卡 - Perlica】
@@ -87,7 +87,7 @@ async def character_list(data: Message):
 ━━━━━━━━━━━━━━
 更多角色信息将在游戏上线后持续更新！
 
-提示：发送 "佩莉卡信息" 可以查看详细角色信息'''
+提示：发送 "佩莉卡详情" 可以查看详细角色信息'''
     return Chain(data).text(characters_text)
 
 

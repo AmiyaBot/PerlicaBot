@@ -1,12 +1,30 @@
 import asyncio
+import os
+import yaml
 from amiyabot import AmiyaBot, Message, Chain
+
+# 加载配置文件
+config_path = os.path.join(os.path.dirname(__file__), 'config', 'config.yaml')
+
+if os.path.exists(config_path):
+    with open(config_path, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+    bot_config = config.get('bot', {})
+else:
+    # 如果配置文件不存在，使用默认配置
+    bot_config = {
+        'appid': os.environ.get('BOT_APPID', ''),
+        'token': os.environ.get('BOT_TOKEN', ''),
+        'app_name': 'PerlicaBot',
+        'log_name': 'PerlicaBot'
+    }
 
 # 创建PerlicaBot实例 - 终末地版本
 bot = AmiyaBot(
-    appid='your_appid',
-    token='your_token',
-    app_name='PerlicaBot',
-    log_name='PerlicaBot'
+    appid=bot_config.get('appid', ''),
+    token=bot_config.get('token', ''),
+    app_name=bot_config.get('app_name', 'PerlicaBot'),
+    log_name=bot_config.get('log_name', 'PerlicaBot')
 )
 
 
