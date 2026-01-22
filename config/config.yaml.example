@@ -1,0 +1,23 @@
+# PerlicaBot 配置文件示例
+# 复制此文件为 config.yaml 并填入你的配置信息
+
+# 机器人基础配置
+bot:
+  appid: ""  # QQ机器人的AppID
+  token: ""  # QQ机器人的Token
+  app_name: "PerlicaBot"
+  log_name: "PerlicaBot"
+
+# 管理员配置
+admin:
+  accounts: []  # 管理员账号列表，例如：["123456789", "987654321"]
+
+# 插件配置
+plugins:
+  enabled: true
+  path: "plugins"
+
+# 日志配置
+log:
+  level: "INFO"  # 日志级别：DEBUG, INFO, WARNING, ERROR
+  save_path: "log"
