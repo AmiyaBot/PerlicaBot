@@ -29,6 +29,8 @@ PerlicaBot 是基于 AmiyaBot 框架开发的聊天机器人，专门为《明�
 
 ## 🚀 快速开始
 
+详细部署指南请参阅 [部署文档](docs/DEPLOYMENT.md)。
+
 ### 环境要求
 
 - Python 3.10 或更高版本
