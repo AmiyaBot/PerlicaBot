@@ -1,0 +1,2 @@
+amiyabot>=6.0.0
+amiyabot-arknights-gamedata>=3.0.0
